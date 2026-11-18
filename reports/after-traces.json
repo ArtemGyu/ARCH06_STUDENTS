@@ -1,0 +1,267 @@
+[
+  {
+    "name": "primary",
+    "selector": "#buttons .ui-button--primary",
+    "computed": [
+      {
+        "name": "background-color",
+        "value": "rgb(54, 89, 217)"
+      },
+      {
+        "name": "padding-left",
+        "value": "20px"
+      }
+    ],
+    "candidates": [
+      {
+        "selector": "input[type=\"button\" i], input[type=\"submit\" i], input[type=\"reset\" i], input[type=\"file\" i]::-webkit-file-upload-button, button",
+        "origin": "user-agent",
+        "layers": [],
+        "line": null,
+        "declarations": [
+          {
+            "name": "background-color",
+            "value": "buttonface",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-button",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 2,
+        "styleSheetId": "style-sheet-14592-9",
+        "declarations": [
+          {
+            "name": "border",
+            "value": "1px solid transparent",
+            "important": false
+          },
+          {
+            "name": "padding-left",
+            "value": "1.25rem",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-button--primary",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 3,
+        "styleSheetId": "style-sheet-14592-9",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "var(--color-accent)",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "",
+            "important": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "danger-tag",
+    "selector": ".ui-card .ui-tag--danger",
+    "computed": [
+      {
+        "name": "color",
+        "value": "rgb(187, 40, 58)"
+      },
+      {
+        "name": "background-color",
+        "value": "rgb(255, 240, 242)"
+      },
+      {
+        "name": "padding-left",
+        "value": "10.4px"
+      }
+    ],
+    "candidates": [
+      {
+        "selector": ".ui-tag",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 26,
+        "styleSheetId": "style-sheet-14592-9",
+        "declarations": [
+          {
+            "name": "padding-left",
+            "value": "0.65rem",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-tag--danger",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 30,
+        "styleSheetId": "style-sheet-14592-9",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "var(--color-danger-bg)",
+            "important": false
+          },
+          {
+            "name": "color",
+            "value": "var(--color-danger)",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "",
+            "important": false
+          },
+          {
+            "name": "color",
+            "value": "var(--color-danger)",
+            "important": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "required",
+    "selector": "#user-email",
+    "computed": [
+      {
+        "name": "background-color",
+        "value": "rgb(255, 255, 255)"
+      },
+      {
+        "name": "border-top-color",
+        "value": "rgb(123, 137, 164)"
+      }
+    ],
+    "candidates": [
+      {
+        "selector": "input",
+        "origin": "user-agent",
+        "layers": [],
+        "line": null,
+        "declarations": [
+          {
+            "name": "border-top-color",
+            "value": "light-dark(rgb(118, 118, 118), rgb(133, 133, 133))",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "field",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-field > :where(input, textarea)",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 11,
+        "styleSheetId": "style-sheet-14592-9",
+        "declarations": [
+          {
+            "name": "border",
+            "value": "1px solid var(--color-border)",
+            "important": false
+          },
+          {
+            "name": "background",
+            "value": "var(--color-surface)",
+            "important": false
+          },
+          {
+            "name": "border-top-color",
+            "value": "",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "",
+            "important": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "danger-button",
+    "selector": "#buttons .ui-button--danger",
+    "computed": [
+      {
+        "name": "background-color",
+        "value": "rgb(187, 40, 58)"
+      }
+    ],
+    "candidates": [
+      {
+        "selector": "input[type=\"button\" i], input[type=\"submit\" i], input[type=\"reset\" i], input[type=\"file\" i]::-webkit-file-upload-button, button",
+        "origin": "user-agent",
+        "layers": [],
+        "line": null,
+        "declarations": [
+          {
+            "name": "background-color",
+            "value": "buttonface",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-button",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 2,
+        "styleSheetId": "style-sheet-14592-9",
+        "declarations": [
+          {
+            "name": "border",
+            "value": "1px solid transparent",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-button--danger",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 6,
+        "styleSheetId": "style-sheet-14592-9",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "var(--color-danger)",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "",
+            "important": false
+          }
+        ]
+      }
+    ]
+  }
+]

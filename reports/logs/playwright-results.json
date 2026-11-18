@@ -106,7 +106,7 @@
       "specs": [
         {
           "title": "native dialog is truly modal and Escape restores focus",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -119,48 +119,18 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 346,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js:9:67",
-                    "location": {
-                      "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                      "column": 67,
-                      "line": 9
-                    },
-                    "snippet": " \u001b[90m  7 |\u001b[39m   \u001b[36mconst\u001b[39m dialog \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#settings-dialog'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m expect(dialog)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   expect(\u001b[36mawait\u001b[39m dialog\u001b[33m.\u001b[39mevaluate((node) \u001b[33m=>\u001b[39m node\u001b[33m.\u001b[39mmatches(\u001b[32m':modal'\u001b[39m)))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Escape'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m expect(dialog)\u001b[33m.\u001b[39mtoBeHidden()\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m expect(trigger)\u001b[33m.\u001b[39mtoBeFocused()\u001b[33m;\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                        "column": 67,
-                        "line": 9
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n   7 |   const dialog = page.locator('#settings-dialog');\n   8 |   await expect(dialog).toBeVisible();\n>  9 |   expect(await dialog.evaluate((node) => node.matches(':modal'))).toBe(true);\n     |                                                                   ^\n  10 |   await page.keyboard.press('Escape');\n  11 |   await expect(dialog).toBeHidden();\n  12 |   await expect(trigger).toBeFocused();\n    at C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js:9:67"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 272,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-18T19:16:25.643Z",
+                  "startTime": "2026-11-18T19:18:35.301Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\dev\\ARCH06_STUDENTS\\project\\test-results\\ui-native-dialog-is-truly-modal-and-Escape-restores-focus\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                    "column": 67,
-                    "line": 9
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "6cacfa4b79c1be8f210f-96ba8602a35350903f0a",
@@ -170,7 +140,7 @@
         },
         {
           "title": "switch is keyboard reachable and Space toggles it",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -181,50 +151,20 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 5259,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#switch-autosave')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('#switch-autosave') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#switch-autosave')\u001b[22m\n\u001b[2m    14 × locator resolved to <input type=\"checkbox\" id=\"switch-autosave\"/>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#switch-autosave')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('#switch-autosave') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#switch-autosave')\u001b[22m\n\u001b[2m    14 × locator resolved to <input type=\"checkbox\" id=\"switch-autosave\"/>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js:19:25",
-                    "location": {
-                      "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                      "column": 25,
-                      "line": 19
-                    },
-                    "snippet": " \u001b[90m 17 |\u001b[39m   \u001b[36mconst\u001b[39m control \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#switch-autosave'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m control\u001b[33m.\u001b[39mfocus()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m expect(control)\u001b[33m.\u001b[39mtoBeFocused()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Space'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m expect(control)\u001b[33m.\u001b[39mtoBeChecked()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m })\u001b[33m;\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                        "column": 25,
-                        "line": 19
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#switch-autosave')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('#switch-autosave') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#switch-autosave')\u001b[22m\n\u001b[2m    14 × locator resolved to <input type=\"checkbox\" id=\"switch-autosave\"/>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  17 |   const control = page.locator('#switch-autosave');\n  18 |   await control.focus();\n> 19 |   await expect(control).toBeFocused();\n     |                         ^\n  20 |   await page.keyboard.press('Space');\n  21 |   await expect(control).toBeChecked();\n  22 | });\n    at C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js:19:25"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 188,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-18T19:16:26.458Z",
+                  "startTime": "2026-11-18T19:18:35.692Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\dev\\ARCH06_STUDENTS\\project\\test-results\\ui-switch-is-keyboard-reachable-and-Space-toggles-it\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                    "column": 25,
-                    "line": 19
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "6cacfa4b79c1be8f210f-b655b9736d9685c4b187",
@@ -234,7 +174,7 @@
         },
         {
           "title": "field does not display error before user interacts",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -245,50 +185,20 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 260,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"rgb(180, 35, 54)\"\u001b[39m",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"rgb(180, 35, 54)\"\u001b[39m\n    at C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js:32:32",
-                    "location": {
-                      "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                      "column": 32,
-                      "line": 32
-                    },
-                    "snippet": " \u001b[90m 30 |\u001b[39m   \u001b[36mawait\u001b[39m expect(field)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m borderColorAfter \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m field\u001b[33m.\u001b[39mevaluate(el \u001b[33m=>\u001b[39m getComputedStyle(el)\u001b[33m.\u001b[39mborderColor)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m   expect(borderColorAfter)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBe(borderColorBefore)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m test(\u001b[32m'no horizontal viewport overflow at 320, 375, 768, 1024, 1440, 1920'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                        "column": 32,
-                        "line": 32
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"rgb(180, 35, 54)\"\u001b[39m\n\n  30 |   await expect(field).toHaveAttribute('aria-invalid', 'true');\n  31 |   const borderColorAfter = await field.evaluate(el => getComputedStyle(el).borderColor);\n> 32 |   expect(borderColorAfter).not.toBe(borderColorBefore);\n     |                                ^\n  33 | });\n  34 |\n  35 | test('no horizontal viewport overflow at 320, 375, 768, 1024, 1440, 1920', async ({ page }) => {\n    at C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js:32:32"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 205,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-18T19:16:32.175Z",
+                  "startTime": "2026-11-18T19:18:35.889Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\dev\\ARCH06_STUDENTS\\project\\test-results\\ui-field-does-not-display-error-before-user-interacts\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                    "column": 32,
-                    "line": 32
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "6cacfa4b79c1be8f210f-59dcd1be9509d48afbad",
@@ -298,7 +208,7 @@
         },
         {
           "title": "no horizontal viewport overflow at 320, 375, 768, 1024, 1440, 1920",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -309,50 +219,20 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 242,
-                  "error": {
-                    "message": "Error: Overflow at 320px\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
-                    "stack": "Error: Overflow at 320px\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js:40:48",
-                    "location": {
-                      "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                      "column": 48,
-                      "line": 40
-                    },
-                    "snippet": " \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m     \u001b[36mconst\u001b[39m overflow \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m document\u001b[33m.\u001b[39mdocumentElement\u001b[33m.\u001b[39mscrollWidth \u001b[33m>\u001b[39m window\u001b[33m.\u001b[39minnerWidth \u001b[33m+\u001b[39m \u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m     expect(overflow\u001b[33m,\u001b[39m \u001b[32m`Overflow at ${width}px`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m   }\n \u001b[90m 42 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                        "column": 48,
-                        "line": 40
-                      },
-                      "message": "Error: Overflow at 320px\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n\n  38 |     await page.goto('/');\n  39 |     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);\n> 40 |     expect(overflow, `Overflow at ${width}px`).toBe(false);\n     |                                                ^\n  41 |   }\n  42 | });\n  43 |\n    at C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js:40:48"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 309,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-18T19:16:32.911Z",
+                  "startTime": "2026-11-18T19:18:36.100Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\dev\\ARCH06_STUDENTS\\project\\test-results\\ui-no-horizontal-viewport--9ebb3--320-375-768-1024-1440-1920\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                    "column": 48,
-                    "line": 40
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "6cacfa4b79c1be8f210f-45c45f885b30201dfd59",
@@ -362,7 +242,7 @@
         },
         {
           "title": "primary button uses theme tokens",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -373,50 +253,20 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 5233,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"rgb(41, 57, 168)\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"rgb(41, 57, 168)\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js:49:92",
-                    "location": {
-                      "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                      "column": 92,
-                      "line": 49
-                    },
-                    "snippet": " \u001b[90m 47 |\u001b[39m   \u001b[36mconst\u001b[39m light \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m button\u001b[33m.\u001b[39mevaluate(el \u001b[33m=>\u001b[39m getComputedStyle(el)\u001b[33m.\u001b[39mbackgroundColor)\u001b[33m;\u001b[39m\n \u001b[90m 48 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#theme-toggle'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m button\u001b[33m.\u001b[39mevaluate(el \u001b[33m=>\u001b[39m getComputedStyle(el)\u001b[33m.\u001b[39mbackgroundColor))\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBe(light)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m\n \u001b[90m 52 |\u001b[39m test(\u001b[32m'alert is dismissible and restore action works'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                        "column": 92,
-                        "line": 49
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"rgb(41, 57, 168)\"\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  47 |   const light = await button.evaluate(el => getComputedStyle(el).backgroundColor);\n  48 |   await page.locator('#theme-toggle').click();\n> 49 |   await expect.poll(() => button.evaluate(el => getComputedStyle(el).backgroundColor)).not.toBe(light);\n     |                                                                                            ^\n  50 | });\n  51 |\n  52 | test('alert is dismissible and restore action works', async ({ page }) => {\n    at C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js:49:92"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 319,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-18T19:16:33.664Z",
+                  "startTime": "2026-11-18T19:18:36.417Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\dev\\ARCH06_STUDENTS\\project\\test-results\\ui-primary-button-uses-theme-tokens\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\dev\\ARCH06_STUDENTS\\project\\tests\\browser\\ui.spec.js",
-                    "column": 92,
-                    "line": 49
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "6cacfa4b79c1be8f210f-7cd9e87b4f28c086f470",
@@ -437,15 +287,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 293,
+                  "duration": 226,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-18T19:16:39.457Z",
+                  "startTime": "2026-11-18T19:18:36.742Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -463,11 +313,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-18T19:16:24.957Z",
-    "duration": 15079.238,
-    "expected": 1,
+    "startTime": "2026-11-18T19:18:34.605Z",
+    "duration": 2537.366,
+    "expected": 6,
     "skipped": 0,
-    "unexpected": 5,
+    "unexpected": 0,
     "flaky": 0
   }
 }
