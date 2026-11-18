@@ -1,0 +1,474 @@
+[
+  {
+    "name": "primary",
+    "selector": "#buttons .ui-button--primary",
+    "computed": [
+      {
+        "name": "background-color",
+        "value": "rgb(41, 57, 168)"
+      },
+      {
+        "name": "padding-left",
+        "value": "10.4px"
+      }
+    ],
+    "candidates": [
+      {
+        "selector": "input[type=\"button\" i], input[type=\"submit\" i], input[type=\"reset\" i], input[type=\"file\" i]::-webkit-file-upload-button, button",
+        "origin": "user-agent",
+        "layers": [],
+        "line": null,
+        "declarations": [
+          {
+            "name": "background-color",
+            "value": "buttonface",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-button",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 2,
+        "styleSheetId": "style-sheet-17492-10",
+        "declarations": [
+          {
+            "name": "border",
+            "value": "1px solid transparent",
+            "important": false
+          },
+          {
+            "name": "padding-left",
+            "value": "1.1rem",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-button",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 3,
+        "styleSheetId": "style-sheet-17492-10",
+        "declarations": [
+          {
+            "name": "padding-inline",
+            "value": "1.25rem",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-button--primary",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 4,
+        "styleSheetId": "style-sheet-17492-10",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "#3659d9",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "rgb(54, 89, 217)",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": "#workbench .ui-button",
+        "origin": "regular",
+        "layers": [],
+        "line": 3,
+        "styleSheetId": "style-sheet-17492-13",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "#2939a8",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "rgb(41, 57, 168)",
+            "important": false
+          },
+          {
+            "name": "padding-left",
+            "value": "0.65rem",
+            "important": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "danger-tag",
+    "selector": ".ui-card .ui-tag--danger",
+    "computed": [
+      {
+        "name": "color",
+        "value": "rgb(255, 255, 255)"
+      },
+      {
+        "name": "background-color",
+        "value": "rgb(193, 34, 54)"
+      },
+      {
+        "name": "padding-left",
+        "value": "16px"
+      }
+    ],
+    "candidates": [
+      {
+        "selector": ".ui-tag",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 24,
+        "styleSheetId": "style-sheet-17492-10",
+        "declarations": [
+          {
+            "name": "padding-left",
+            "value": "0.65rem",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-tag--danger",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 28,
+        "styleSheetId": "style-sheet-17492-10",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "var(--color-danger-bg)",
+            "important": false
+          },
+          {
+            "name": "color",
+            "value": "var(--color-danger)",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "",
+            "important": false
+          },
+          {
+            "name": "color",
+            "value": "var(--color-danger)",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".is-danger",
+        "origin": "regular",
+        "layers": [
+          "states"
+        ],
+        "line": 11,
+        "styleSheetId": "style-sheet-17492-11",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "#c12236",
+            "important": false
+          },
+          {
+            "name": "color",
+            "value": "#ffffff",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "rgb(193, 34, 54)",
+            "important": false
+          },
+          {
+            "name": "color",
+            "value": "rgb(255, 255, 255)",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ":is(.ui-card, #workbench) .ui-tag",
+        "origin": "regular",
+        "layers": [
+          "states"
+        ],
+        "line": 12,
+        "styleSheetId": "style-sheet-17492-11",
+        "declarations": [
+          {
+            "name": "padding-inline",
+            "value": "1rem",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".is-danger",
+        "origin": "regular",
+        "layers": [],
+        "line": 5,
+        "styleSheetId": "style-sheet-17492-13",
+        "declarations": [
+          {
+            "name": "color",
+            "value": "#fff",
+            "important": false
+          },
+          {
+            "name": "color",
+            "value": "rgb(255, 255, 255)",
+            "important": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "required",
+    "selector": "#user-email",
+    "computed": [
+      {
+        "name": "background-color",
+        "value": "rgb(255, 240, 242)"
+      },
+      {
+        "name": "border-top-color",
+        "value": "rgb(180, 35, 54)"
+      }
+    ],
+    "candidates": [
+      {
+        "selector": "input",
+        "origin": "user-agent",
+        "layers": [],
+        "line": null,
+        "declarations": [
+          {
+            "name": "border-top-color",
+            "value": "light-dark(rgb(118, 118, 118), rgb(133, 133, 133))",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "field",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-field input, .ui-field textarea",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 12,
+        "styleSheetId": "style-sheet-17492-10",
+        "declarations": [
+          {
+            "name": "border",
+            "value": "1px solid var(--color-border)",
+            "important": false
+          },
+          {
+            "name": "background",
+            "value": "var(--color-surface)",
+            "important": false
+          },
+          {
+            "name": "border-top-color",
+            "value": "",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-field:has(input:invalid) input",
+        "origin": "regular",
+        "layers": [
+          "states"
+        ],
+        "line": 9,
+        "styleSheetId": "style-sheet-17492-11",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "#fff0f2",
+            "important": false
+          },
+          {
+            "name": "border-top-color",
+            "value": "rgb(180, 35, 54)",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "rgb(255, 240, 242)",
+            "important": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "danger-button",
+    "selector": "#buttons .ui-button--danger",
+    "computed": [
+      {
+        "name": "background-color",
+        "value": "rgb(164, 30, 36)"
+      }
+    ],
+    "candidates": [
+      {
+        "selector": "input[type=\"button\" i], input[type=\"submit\" i], input[type=\"reset\" i], input[type=\"file\" i]::-webkit-file-upload-button, button",
+        "origin": "user-agent",
+        "layers": [],
+        "line": null,
+        "declarations": [
+          {
+            "name": "background-color",
+            "value": "buttonface",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-button",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 2,
+        "styleSheetId": "style-sheet-17492-10",
+        "declarations": [
+          {
+            "name": "border",
+            "value": "1px solid transparent",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-button",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 3,
+        "styleSheetId": "style-sheet-17492-10",
+        "declarations": [
+          {
+            "name": "padding-inline",
+            "value": "1.25rem",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".ui-button--danger",
+        "origin": "regular",
+        "layers": [
+          "components"
+        ],
+        "line": 7,
+        "styleSheetId": "style-sheet-17492-10",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "#b42336",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "rgb(180, 35, 54)",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": ".is-danger",
+        "origin": "regular",
+        "layers": [
+          "states"
+        ],
+        "line": 11,
+        "styleSheetId": "style-sheet-17492-11",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "#c12236",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "rgb(193, 34, 54)",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": "#workbench .ui-button",
+        "origin": "regular",
+        "layers": [],
+        "line": 3,
+        "styleSheetId": "style-sheet-17492-13",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "#2939a8",
+            "important": false
+          },
+          {
+            "name": "background-color",
+            "value": "rgb(41, 57, 168)",
+            "important": false
+          }
+        ]
+      },
+      {
+        "selector": "#workbench .ui-button.is-danger",
+        "origin": "regular",
+        "layers": [],
+        "line": 4,
+        "styleSheetId": "style-sheet-17492-13",
+        "declarations": [
+          {
+            "name": "background",
+            "value": "#a41e24 !important",
+            "important": true
+          },
+          {
+            "name": "background-color",
+            "value": "rgb(164, 30, 36) !important",
+            "important": true
+          }
+        ]
+      }
+    ]
+  }
+]
