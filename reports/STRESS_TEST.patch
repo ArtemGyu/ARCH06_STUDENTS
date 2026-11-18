@@ -1,0 +1,125 @@
+diff --git a/css/app.css b/css/app.css
+index a77b0e3..6fe891c 100644
+--- a/css/app.css
++++ b/css/app.css
+@@ -2,8 +2,10 @@
+ @layer reset, legacy, tokens, base, components, states, utilities;
+ @import url('./reset.css') layer(reset);
+ @import url('./legacy.css') layer(legacy);
++@import url('./vendor-v2.css') layer(legacy.vendor-v2);
+ @import url('./tokens.css') layer(tokens);
+ @import url('./base.css') layer(base);
+ @import url('./components.css') layer(components);
+ @import url('./states.css') layer(states);
+ @import url('./utilities.css') layer(utilities);
++
+diff --git a/css/components.css b/css/components.css
+index 2ca70ad..05a4b6d 100644
+--- a/css/components.css
++++ b/css/components.css
+@@ -54,3 +54,7 @@
+ .ui-dialog > form > p { color: var(--color-muted); }
+ .ui-dialog__actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: .5rem; margin-top: 1.6rem; }
+ @media (max-width: 720px) { .card-grid, .form-grid { grid-template-columns: 1fr; } }
++
++/* Stress envelope A: shared semantics, independent family modifiers. */
++.ui-tag--paused { color: var(--color-paused); background: var(--color-paused-bg); }
++.ui-alert--paused { color: var(--color-paused); border-color: var(--color-paused); background: var(--color-paused-bg); }
+diff --git a/css/tokens.css b/css/tokens.css
+index 4d166b8..9c947ea 100644
+--- a/css/tokens.css
++++ b/css/tokens.css
+@@ -1,5 +1,7 @@
+ ﻿:root {
+   color-scheme: light;
++  --color-paused: #69409b;
++  --color-paused-bg: #f2eaff;
+   --color-danger-hover: #971d2a;
+   --color-danger-ink: #ffffff;
+   --color-disabled-bg: #e4e9f3;
+@@ -35,6 +37,8 @@
+ }
+ :root[data-theme='dark'] {
+   color-scheme: dark;
++  --color-paused: #dfc4ff;
++  --color-paused-bg: #3c2857;
+   --color-danger-hover: #ffb8c2;
+   --color-danger-ink: #32121b;
+   --color-disabled-bg: #303e59;
+@@ -61,3 +65,4 @@
+   --shadow-card: 0 15px 45px rgba(0, 0, 0, .18);
+ }
+ 
++
+diff --git a/css/vendor-v2.css b/css/vendor-v2.css
+new file mode 100644
+index 0000000..814f6d7
+--- /dev/null
++++ b/css/vendor-v2.css
+@@ -0,0 +1,2 @@
++﻿/* New contractor release: prefixed at the integration boundary. */
++.legacy-widget :where(.ui-button, .legacy-action) { border-radius: 0; }
+diff --git a/index.html b/index.html
+index fcf147a..68416f0 100644
+--- a/index.html
++++ b/index.html
+@@ -38,6 +38,7 @@
+         <section class="lab-section" id="fields" aria-labelledby="fields-title"><div class="section-heading"><div><span class="eyebrow">COMPONENT 02</span><h2 id="fields-title">Поля и валидация</h2></div><span class="ui-tag ui-tag--warning">сложное поведение</span></div><p class="section-intro">Сообщение об ошибке не должно появляться до взаимодействия пользователя. Фокус должен сохраняться во всех темах.</p><form class="form-grid" id="demo-form" novalidate><div class="ui-field"><label for="user-name">Имя сотрудника <span aria-hidden="true">*</span></label><input type="text" id="user-name" name="name" required aria-describedby="name-hint" placeholder="Например, Мария Орлова"><span class="ui-field__hint" id="name-hint">Укажите имя для сохранения изменений</span></div><div class="ui-field"><label for="user-email">Корпоративная почта <span aria-hidden="true">*</span></label><input type="email" id="user-email" name="email" required placeholder="name@company.ru" aria-describedby="email-hint"><span class="ui-field__hint" id="email-hint">Мы отправим подтверждение на эту почту</span></div><div class="ui-field ui-field--full"><label for="user-note">Комментарий</label><textarea id="user-note" rows="3" placeholder="Сообщение проектной команде"></textarea></div><div class="ui-field__actions"><button class="ui-button ui-button--primary" type="submit">Проверить форму</button><span id="form-feedback" role="status" aria-live="polite"></span></div></form></section>
+         <section class="lab-section" id="cards" aria-labelledby="cards-title"><div class="section-heading"><div><span class="eyebrow">COMPONENT 03</span><h2 id="cards-title">Карточки в контейнере</h2></div><span class="ui-tag ui-tag--neutral">длинный контент</span></div><p class="section-intro">Компонент должен выдерживать вложенные элементы, длинные заголовки и ширину 320 px.</p><div class="card-grid"><article class="ui-card"><div class="ui-card__meta"><span class="ui-tag ui-tag--success">Работает</span><span>№ 01</span></div><h3>Локальные переменные</h3><p>Карточка использует значения из семантических токенов и не зависит от оформления родителя.</p><a href="#tags" class="ui-button ui-button--secondary ui-button--sm">Смотреть теги</a></article><article class="ui-card ui-card--featured"><div class="ui-card__meta"><span class="ui-tag ui-tag--warning">Ревью</span><span>№ 02</span></div><h3>Очень длинное название компонента, которое не должно ломать адаптивную сетку</h3><p>При увеличении текста, изменении темы и ширины блока элементы должны переноситься без горизонтальной прокрутки.</p><button class="ui-button ui-button--ghost ui-button--sm" type="button">Подробнее</button></article><article class="ui-card"><div class="ui-card__meta"><span class="ui-tag ui-tag--danger">Риск</span><span>№ 03</span></div><h3>Вложенное уведомление</h3><p>Проверка конфликта между стилями карточки и вложенного уведомления.</p><div class="ui-alert ui-alert--warning" role="status"><div><strong>Внимание</strong><p>Вложенный текст не должен наследовать чужие размеры.</p></div></div></article></div></section>
+         <section class="lab-section" id="tags" aria-labelledby="tags-title"><div class="section-heading"><div><span class="eyebrow">COMPONENT 04</span><h2 id="tags-title">Метки статуса</h2></div><span class="ui-tag ui-tag--neutral">неинтерактивные</span></div><div class="sample-panel"><div class="sample-row"><span class="ui-tag ui-tag--neutral">Черновик</span><span class="ui-tag ui-tag--success">Одобрено</span><span class="ui-tag ui-tag--warning">На проверке</span><span class="ui-tag ui-tag--danger">Отклонено</span></div><p class="mini-note">Метки не являются кнопками: не добавляйте им ложных интерактивных состояний.</p></div></section>
++        <section class="lab-section" id="paused-example" aria-labelledby="paused-title"><div class="section-heading"><h2 id="paused-title">Приостановленное согласование</h2><span class="ui-tag ui-tag--paused">Приостановлено</span></div><div class="ui-alert ui-alert--paused" role="status"><div><strong>Согласование приостановлено</strong><p>Процесс продолжится после уточнения данных.</p></div></div></section>
+         <section class="lab-section" id="alerts" aria-labelledby="alerts-title"><div class="section-heading"><div><span class="eyebrow">COMPONENT 05</span><h2 id="alerts-title">Уведомления</h2></div><span class="ui-tag ui-tag--neutral">4 роли</span></div><div class="alerts-stack"><div class="ui-alert ui-alert--info" role="status"><div><strong>Информация</strong><p>Новая версия элементов доступна в тестовой среде.</p></div><button class="ui-alert__dismiss" type="button" aria-label="Закрыть уведомление">×</button></div><div class="ui-alert ui-alert--success" role="status"><div><strong>Успешно</strong><p>Изменения сохранены в рабочем пространстве.</p></div><button class="ui-alert__dismiss" type="button" aria-label="Закрыть уведомление">×</button></div><div class="ui-alert ui-alert--warning" role="status"><div><strong>Предупреждение</strong><p>Остались неподтверждённые настройки интерфейса.</p></div><button class="ui-alert__dismiss" type="button" aria-label="Закрыть уведомление">×</button></div><div class="ui-alert ui-alert--danger" role="alert"><div><strong>Ошибка</strong><p>Каскад переопределил ожидаемое состояние.</p></div><button class="ui-alert__dismiss" type="button" aria-label="Закрыть уведомление">×</button></div></div><button id="restore-alerts" class="ui-button ui-button--secondary ui-button--sm" type="button">Восстановить уведомления</button><span id="alert-feedback" class="u-visually-hidden" role="status"></span></section>
+         <section class="lab-section" id="switches" aria-labelledby="switches-title"><div class="section-heading"><div><span class="eyebrow">COMPONENT 06</span><h2 id="switches-title">Переключатели</h2></div><span class="ui-tag ui-tag--warning">клавиатура</span></div><div class="settings-list"><label class="ui-switch"><span class="ui-switch__copy"><strong>Системные уведомления</strong><small>Включить обновления о критических событиях</small></span><input id="switch-notifications" type="checkbox" checked><span class="ui-switch__track" aria-hidden="true"><span class="ui-switch__thumb"></span></span></label><label class="ui-switch"><span class="ui-switch__copy"><strong>Автосохранение изменений</strong><small>Применять настройки без подтверждения</small></span><input id="switch-autosave" type="checkbox"><span class="ui-switch__track" aria-hidden="true"><span class="ui-switch__thumb"></span></span></label><label class="ui-switch"><span class="ui-switch__copy"><strong>Заблокированная функция</strong><small>Недоступна по политике компании</small></span><input id="switch-locked" type="checkbox" disabled><span class="ui-switch__track" aria-hidden="true"><span class="ui-switch__thumb"></span></span></label></div><p id="switch-feedback" class="mini-note" role="status">Проверьте Tab и пробел на активных переключателях.</p></section>
+         <section class="lab-section" id="dialogs" aria-labelledby="dialogs-title"><div class="section-heading"><div><span class="eyebrow">COMPONENT 07</span><h2 id="dialogs-title">Модальное окно</h2></div><span class="ui-tag ui-tag--neutral">native dialog</span></div><div class="sample-panel"><p>Откройте окно, нажмите Tab, затем Esc. В модальном режиме элементы под окном должны быть неактивны.</p><button class="ui-button ui-button--primary" type="button" data-open-dialog>Открыть окно настроек</button><p id="dialog-feedback" class="mini-note" role="status"></p></div></section>
+@@ -51,3 +52,4 @@
+ </body>
+ </html>
+ 
++
+diff --git a/tests/browser/regression.spec.js b/tests/browser/regression.spec.js
+new file mode 100644
+index 0000000..6b4ab7a
+--- /dev/null
++++ b/tests/browser/regression.spec.js
+@@ -0,0 +1,41 @@
++﻿import { test, expect } from '@playwright/test';
++import { cases, runCase, contrast } from '../../tools/scenarios.mjs';
++for (const theme of ['light','dark']) {
++  for (const scenario of cases) test(`${scenario.id} ${theme}: ${scenario.family}/${scenario.variant}/${scenario.state}`, async ({page}) => {
++    const actual = await runCase(page, scenario, theme);
++    expect(actual.ok, actual.fact).toBe(true);
++  });
++  test(`${theme}: paused extension preserves neighbouring families and contrast`, async ({page}) => {
++    await page.goto('/'); if (theme === 'dark') { await page.locator('#theme-toggle').click(); await page.waitForTimeout(200); }
++    const danger = page.locator('#buttons .ui-button--danger');
++    const before = await danger.evaluate(e=>getComputedStyle(e).backgroundColor);
++    const tag = page.locator('#paused-example .ui-tag--paused');
++    const alert = page.locator('#paused-example .ui-alert--paused');
++    for (const item of [tag,alert]) {
++      const colors = await item.evaluate(e=>({fg:getComputedStyle(e).color,bg:getComputedStyle(e).backgroundColor}));
++      expect(contrast(colors.fg,colors.bg)).toBeGreaterThanOrEqual(4.5);
++    }
++    const alertColor = await alert.evaluate(e=>getComputedStyle(e).backgroundColor);
++    await tag.evaluate(e=>e.className='ui-tag ui-tag--danger');
++    expect(await alert.evaluate(e=>getComputedStyle(e).backgroundColor)).toBe(alertColor);
++    expect(await danger.evaluate(e=>getComputedStyle(e).backgroundColor)).toBe(before);
++  });
++  test(`${theme}: vendor v2 remains scoped and layered`, async ({page}) => {
++    await page.goto('/'); if (theme === 'dark') { await page.locator('#theme-toggle').click(); await page.waitForTimeout(200); }
++    const primary = page.locator('#buttons .ui-button--primary').first();
++    expect(parseFloat(await primary.evaluate(e=>getComputedStyle(e).borderRadius))).toBeGreaterThan(0);
++    expect(await page.locator('.legacy-action').evaluate(e=>getComputedStyle(e).borderRadius)).toBe('0px');
++    expect(await primary.evaluate(e=>getComputedStyle(e).backgroundColor)).toBe(await page.evaluate(()=>{const s=document.createElement('i');s.style.color='var(--color-accent)';document.body.append(s);const c=getComputedStyle(s).color;s.remove();return c;}));
++    const response = await page.request.get('/css/vendor-v2.css'); expect(response.ok()).toBe(true);
++  });
++  test(`${theme}: container query uses card width and preserves outside buttons`, async ({page}) => {
++    await page.goto('/'); if(theme==='dark')await page.locator('#theme-toggle').click();
++    await page.evaluate(()=>document.querySelector('#cards').insertAdjacentHTML('beforeend','<article class="ui-card" id="container-probe" style="width:500px;max-width:100%"><button class="ui-button ui-button--primary">Действие</button></article>'));
++    const dimensions=()=>page.locator('#container-probe').evaluate(e=>{const s=getComputedStyle(e);return {inner:e.clientWidth-parseFloat(s.paddingLeft)-parseFloat(s.paddingRight),button:e.querySelector('button').getBoundingClientRect().width};});
++    const wide=await dimensions();expect(wide.button).toBeLessThan(wide.inner);
++    const outside=await page.locator('#buttons .ui-button--primary').first().evaluate(e=>e.getBoundingClientRect().width);
++    await page.locator('#container-probe').evaluate(e=>e.style.width='350px');const small=await dimensions();expect(Math.abs(small.button-small.inner)).toBeLessThanOrEqual(1);
++    expect(await page.locator('#buttons .ui-button--primary').first().evaluate(e=>e.getBoundingClientRect().width)).toBe(outside);
++  });
++}
++
