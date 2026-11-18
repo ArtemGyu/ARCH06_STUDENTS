@@ -1,6 +1,6 @@
 {
   "phase": "before",
-  "date": "2026-11-18T19:15:13.883Z",
+  "date": "2026-11-18T19:21:43.780Z",
   "node": "v26.13.1",
   "browser": "157.0.8103.79",
   "cases": [
@@ -595,8 +595,8 @@
       "width": 375,
       "theme": "dark",
       "expected": "Текст и описание имеют contrast >=4.5",
-      "ok": true,
-      "fact": "contrast=13.37/13.37; color=rgb(17, 24, 39); background=rgb(213, 225, 237)"
+      "ok": false,
+      "fact": "contrast=1.60/1.60; color=rgb(17, 24, 39); background=rgb(26, 62, 93)"
     },
     {
       "id": "S21-dark",
@@ -606,8 +606,8 @@
       "width": 375,
       "theme": "dark",
       "expected": "Текст и описание имеют contrast >=4.5",
-      "ok": true,
-      "fact": "contrast=15.25/15.25; color=rgb(17, 24, 39); background=rgb(224, 242, 233)"
+      "ok": false,
+      "fact": "contrast=1.62/1.62; color=rgb(17, 24, 39); background=rgb(23, 68, 56)"
     },
     {
       "id": "S22-dark",
@@ -617,8 +617,8 @@
       "width": 375,
       "theme": "dark",
       "expected": "Текст и описание имеют contrast >=4.5",
-      "ok": true,
-      "fact": "contrast=15.40/15.40; color=rgb(17, 24, 39); background=rgb(249, 238, 214)"
+      "ok": false,
+      "fact": "contrast=1.87/1.87; color=rgb(17, 24, 39); background=rgb(87, 66, 35)"
     },
     {
       "id": "S23-dark",
@@ -874,7 +874,7 @@
             "components"
           ],
           "line": 2,
-          "styleSheetId": "style-sheet-17492-10",
+          "styleSheetId": "style-sheet-2600-13",
           "declarations": [
             {
               "name": "border",
@@ -895,7 +895,7 @@
             "components"
           ],
           "line": 3,
-          "styleSheetId": "style-sheet-17492-10",
+          "styleSheetId": "style-sheet-2600-13",
           "declarations": [
             {
               "name": "padding-inline",
@@ -911,7 +911,7 @@
             "components"
           ],
           "line": 4,
-          "styleSheetId": "style-sheet-17492-10",
+          "styleSheetId": "style-sheet-2600-13",
           "declarations": [
             {
               "name": "background",
@@ -930,7 +930,7 @@
           "origin": "regular",
           "layers": [],
           "line": 3,
-          "styleSheetId": "style-sheet-17492-13",
+          "styleSheetId": "style-sheet-2600-12",
           "declarations": [
             {
               "name": "background",
@@ -976,7 +976,7 @@
             "components"
           ],
           "line": 24,
-          "styleSheetId": "style-sheet-17492-10",
+          "styleSheetId": "style-sheet-2600-13",
           "declarations": [
             {
               "name": "padding-left",
@@ -992,7 +992,7 @@
             "components"
           ],
           "line": 28,
-          "styleSheetId": "style-sheet-17492-10",
+          "styleSheetId": "style-sheet-2600-13",
           "declarations": [
             {
               "name": "background",
@@ -1023,7 +1023,7 @@
             "states"
           ],
           "line": 11,
-          "styleSheetId": "style-sheet-17492-11",
+          "styleSheetId": "style-sheet-2600-10",
           "declarations": [
             {
               "name": "background",
@@ -1054,7 +1054,7 @@
             "states"
           ],
           "line": 12,
-          "styleSheetId": "style-sheet-17492-11",
+          "styleSheetId": "style-sheet-2600-10",
           "declarations": [
             {
               "name": "padding-inline",
@@ -1068,7 +1068,7 @@
           "origin": "regular",
           "layers": [],
           "line": 5,
-          "styleSheetId": "style-sheet-17492-13",
+          "styleSheetId": "style-sheet-2600-12",
           "declarations": [
             {
               "name": "color",
@@ -1123,7 +1123,7 @@
             "components"
           ],
           "line": 12,
-          "styleSheetId": "style-sheet-17492-10",
+          "styleSheetId": "style-sheet-2600-13",
           "declarations": [
             {
               "name": "border",
@@ -1154,7 +1154,7 @@
             "states"
           ],
           "line": 9,
-          "styleSheetId": "style-sheet-17492-11",
+          "styleSheetId": "style-sheet-2600-10",
           "declarations": [
             {
               "name": "background",
@@ -1205,7 +1205,7 @@
             "components"
           ],
           "line": 2,
-          "styleSheetId": "style-sheet-17492-10",
+          "styleSheetId": "style-sheet-2600-13",
           "declarations": [
             {
               "name": "border",
@@ -1221,7 +1221,7 @@
             "components"
           ],
           "line": 3,
-          "styleSheetId": "style-sheet-17492-10",
+          "styleSheetId": "style-sheet-2600-13",
           "declarations": [
             {
               "name": "padding-inline",
@@ -1237,7 +1237,7 @@
             "components"
           ],
           "line": 7,
-          "styleSheetId": "style-sheet-17492-10",
+          "styleSheetId": "style-sheet-2600-13",
           "declarations": [
             {
               "name": "background",
@@ -1258,7 +1258,7 @@
             "states"
           ],
           "line": 11,
-          "styleSheetId": "style-sheet-17492-11",
+          "styleSheetId": "style-sheet-2600-10",
           "declarations": [
             {
               "name": "background",
@@ -1277,7 +1277,7 @@
           "origin": "regular",
           "layers": [],
           "line": 3,
-          "styleSheetId": "style-sheet-17492-13",
+          "styleSheetId": "style-sheet-2600-12",
           "declarations": [
             {
               "name": "background",
@@ -1296,7 +1296,7 @@
           "origin": "regular",
           "layers": [],
           "line": 4,
-          "styleSheetId": "style-sheet-17492-13",
+          "styleSheetId": "style-sheet-2600-12",
           "declarations": [
             {
               "name": "background",
