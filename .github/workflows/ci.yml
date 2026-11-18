@@ -1,4 +1,4 @@
-name: CSS Architecture Verification
+﻿name: CSS Architecture Verification
 on:
   push:
   pull_request:
@@ -10,5 +10,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Verify structural criteria
-        run: npm test
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:all
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-results
+          path: |
+            reports/logs/
+            test-results/

@@ -1,6 +1,6 @@
 {
   "phase": "after",
-  "date": "2026-11-18T19:21:23.481Z",
+  "date": "2026-11-18T19:36:08.147Z",
   "node": "v26.13.1",
   "browser": "157.0.8103.79",
   "cases": [
@@ -379,6 +379,28 @@
       "fact": "{\"inner\":280.20000000000005,\"button\":279.828125}"
     },
     {
+      "id": "S35-light",
+      "family": "button",
+      "variant": "primary",
+      "state": "focus-visible",
+      "width": 375,
+      "theme": "light",
+      "expected": "Tab показывает фокус основной кнопки в тёмной и светлой теме",
+      "ok": true,
+      "fact": "{\"focused\":true,\"visible\":true,\"outline\":\"3px\"}"
+    },
+    {
+      "id": "S36-light",
+      "family": "button",
+      "variant": "secondary",
+      "state": "disabled",
+      "width": 320,
+      "theme": "light",
+      "expected": "Нативная secondary disabled не реагирует на click, focus и hover",
+      "ok": true,
+      "fact": "{\"disabled\":true,\"focused\":false,\"clicks\":0,\"transform\":\"none\"}"
+    },
+    {
       "id": "S01-dark",
       "family": "button",
       "variant": "primary",
@@ -751,6 +773,28 @@
       "expected": "Кнопка карточки до 400px занимает всю ширину слота",
       "ok": true,
       "fact": "{\"inner\":280.20000000000005,\"button\":279.828125}"
+    },
+    {
+      "id": "S35-dark",
+      "family": "button",
+      "variant": "primary",
+      "state": "focus-visible",
+      "width": 375,
+      "theme": "dark",
+      "expected": "Tab показывает фокус основной кнопки в тёмной и светлой теме",
+      "ok": true,
+      "fact": "{\"focused\":true,\"visible\":true,\"outline\":\"3px\"}"
+    },
+    {
+      "id": "S36-dark",
+      "family": "button",
+      "variant": "secondary",
+      "state": "disabled",
+      "width": 320,
+      "theme": "dark",
+      "expected": "Нативная secondary disabled не реагирует на click, focus и hover",
+      "ok": true,
+      "fact": "{\"disabled\":true,\"focused\":false,\"clicks\":0,\"transform\":\"none\"}"
     }
   ],
   "viewports": [
@@ -874,7 +918,7 @@
             "components"
           ],
           "line": 2,
-          "styleSheetId": "style-sheet-14592-9",
+          "styleSheetId": "style-sheet-8584-15",
           "declarations": [
             {
               "name": "border",
@@ -895,7 +939,7 @@
             "components"
           ],
           "line": 3,
-          "styleSheetId": "style-sheet-14592-9",
+          "styleSheetId": "style-sheet-8584-15",
           "declarations": [
             {
               "name": "background",
@@ -936,7 +980,7 @@
             "components"
           ],
           "line": 26,
-          "styleSheetId": "style-sheet-14592-9",
+          "styleSheetId": "style-sheet-8584-15",
           "declarations": [
             {
               "name": "padding-left",
@@ -952,7 +996,7 @@
             "components"
           ],
           "line": 30,
-          "styleSheetId": "style-sheet-14592-9",
+          "styleSheetId": "style-sheet-8584-15",
           "declarations": [
             {
               "name": "background",
@@ -1017,7 +1061,7 @@
             "components"
           ],
           "line": 11,
-          "styleSheetId": "style-sheet-14592-9",
+          "styleSheetId": "style-sheet-8584-15",
           "declarations": [
             {
               "name": "border",
@@ -1073,7 +1117,7 @@
             "components"
           ],
           "line": 2,
-          "styleSheetId": "style-sheet-14592-9",
+          "styleSheetId": "style-sheet-8584-15",
           "declarations": [
             {
               "name": "border",
@@ -1089,7 +1133,7 @@
             "components"
           ],
           "line": 6,
-          "styleSheetId": "style-sheet-14592-9",
+          "styleSheetId": "style-sheet-8584-15",
           "declarations": [
             {
               "name": "background",

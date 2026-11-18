@@ -2,3 +2,7 @@ node_modules/
 playwright-report/
 test-results/
 .DS_Store
+
+reports/logs/playwright-results.json
+reports/previews/
+

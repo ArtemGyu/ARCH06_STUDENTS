@@ -13,7 +13,7 @@ if(phase==='before')await page.route('http://127.0.0.1:5173/**',async route=>{co
 const folder=`reports/screenshots/${phase}`;await mkdir(folder,{recursive:true});
 const output={phase,date:new Date().toISOString(),node:process.version,browser:browser.version(),cases:[],viewports:[],traces:[]};
 for(const theme of ['light','dark']){
- for(const width of widths){await page.setViewportSize({width,height:900});await page.goto('http://127.0.0.1:5173');if(theme==='dark'){await page.locator('#theme-toggle').click();await page.waitForTimeout(250);}await page.screenshot({path:`${folder}/${theme}-${width}.png`,fullPage:true});const v=await page.evaluate(()=>({scrollWidth:document.documentElement.scrollWidth,innerWidth}));output.viewports.push({theme,width,...v,ok:v.scrollWidth<=v.innerWidth});}
+ for(const width of widths){await page.setViewportSize({width,height:900});await page.goto('http://127.0.0.1:5173');if(theme==='dark'){await page.locator('#theme-toggle').click();await page.waitForTimeout(250);}await page.screenshot({path:`${folder}/${theme}-${width}.png`,fullPage:true});if(width===375)for(const section of ['buttons','fields','cards'])await page.locator('#'+section).screenshot({path:`${folder}/${theme}-375-${section}.png`});const v=await page.evaluate(()=>({scrollWidth:document.documentElement.scrollWidth,innerWidth}));output.viewports.push({theme,width,...v,ok:v.scrollWidth<=v.innerWidth});}
 }
 await page.setViewportSize({width:1440,height:900});await page.goto('http://127.0.0.1:5173');await page.locator('#open-dialog').click();await page.screenshot({path:`${folder}/dialog.png`});
 const cdp=await page.context().newCDPSession(page);await cdp.send('DOM.enable');await cdp.send('CSS.enable');await page.goto('http://127.0.0.1:5173');
@@ -22,9 +22,10 @@ const doc=await cdp.send('DOM.getDocument');const {nodeId}=await cdp.send('DOM.q
 const candidates=matched.matchedCSSRules.map(m=>({selector:m.rule.selectorList.text,origin:m.rule.origin,layers:m.rule.layers?.map(x=>x.text)||[],line:m.rule.style.range?.startLine+1,styleSheetId:m.rule.styleSheetId,declarations:m.rule.style.cssProperties.filter(x=>properties.includes(x.name)||['background','border','padding-inline'].includes(x.name)).map(x=>({name:x.name,value:x.value,important:!!x.important}))})).filter(x=>x.declarations.length);
 output.traces.push({name,selector,computed:computed.computedStyle.filter(x=>properties.includes(x.name)||['background','border','padding-inline'].includes(x.name)),candidates});}
 await writeFile(`reports/${phase}-traces.json`,JSON.stringify(output.traces,null,2));
-for(const theme of ['light','dark'])for(const item of cases){let value;try{value=await runCase(page,item,theme);}catch(e){value={ok:false,fact:e.message.slice(0,300)};}output.cases.push({id:`${item.id}-${theme}`,family:item.family,variant:item.variant,state:item.state,width:item.width,theme,expected:item.expected,...value});process.stdout.write(`${phase} ${item.id}-${theme} ${value.ok?'OK':'FAIL'}\n`);}
+for(const theme of ['light','dark'])for(const item of cases){let value;try{value=await runCase(page,item,theme);}catch(e){value={ok:false,fact:e.message.slice(0,300)};}if(['S11','S16','S25','S27','S31'].includes(item.id))await page.screenshot({path:`${folder}/${item.id}-${theme}.png`});output.cases.push({id:`${item.id}-${theme}`,family:item.family,variant:item.variant,state:item.state,width:item.width,theme,expected:item.expected,...value});process.stdout.write(`${phase} ${item.id}-${theme} ${value.ok?'OK':'FAIL'}\n`);}
 await writeFile(`reports/${phase}.json`,JSON.stringify(output,null,2));await browser.close();
 process.stdout.write(JSON.stringify({phase,passed:output.cases.filter(x=>x.ok).length,total:output.cases.length,overflow:output.viewports.filter(x=>!x.ok)}));
 } finally {server.kill();}
+
 
 

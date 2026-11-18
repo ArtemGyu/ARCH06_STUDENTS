@@ -1,6 +1,6 @@
 {
   "phase": "before",
-  "date": "2026-11-18T19:21:43.780Z",
+  "date": "2026-11-18T19:35:18.670Z",
   "node": "v26.13.1",
   "browser": "157.0.8103.79",
   "cases": [
@@ -379,6 +379,28 @@
       "fact": "{\"inner\":313.20000000000005,\"button\":109.984375}"
     },
     {
+      "id": "S35-light",
+      "family": "button",
+      "variant": "primary",
+      "state": "focus-visible",
+      "width": 375,
+      "theme": "light",
+      "expected": "Tab показывает фокус основной кнопки в тёмной и светлой теме",
+      "ok": true,
+      "fact": "{\"focused\":true,\"visible\":true,\"outline\":\"3px\"}"
+    },
+    {
+      "id": "S36-light",
+      "family": "button",
+      "variant": "secondary",
+      "state": "disabled",
+      "width": 320,
+      "theme": "light",
+      "expected": "Нативная secondary disabled не реагирует на click, focus и hover",
+      "ok": false,
+      "fact": "locator.hover: Timeout 4000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#buttons .ui-button--secondary').first()\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"button\" class=\"ui-button ui-button--secondary\">Вторичное</button>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × wa"
+    },
+    {
       "id": "S01-dark",
       "family": "button",
       "variant": "primary",
@@ -607,7 +629,7 @@
       "theme": "dark",
       "expected": "Текст и описание имеют contrast >=4.5",
       "ok": false,
-      "fact": "contrast=1.62/1.62; color=rgb(17, 24, 39); background=rgb(23, 68, 56)"
+      "fact": "contrast=1.65/1.65; color=rgb(17, 24, 39); background=rgb(24, 69, 57)"
     },
     {
       "id": "S22-dark",
@@ -618,7 +640,7 @@
       "theme": "dark",
       "expected": "Текст и описание имеют contrast >=4.5",
       "ok": false,
-      "fact": "contrast=1.87/1.87; color=rgb(17, 24, 39); background=rgb(87, 66, 35)"
+      "fact": "contrast=1.90/1.90; color=rgb(17, 24, 39); background=rgb(88, 67, 36)"
     },
     {
       "id": "S23-dark",
@@ -751,6 +773,28 @@
       "expected": "Кнопка карточки до 400px занимает всю ширину слота",
       "ok": false,
       "fact": "{\"inner\":313.20000000000005,\"button\":109.984375}"
+    },
+    {
+      "id": "S35-dark",
+      "family": "button",
+      "variant": "primary",
+      "state": "focus-visible",
+      "width": 375,
+      "theme": "dark",
+      "expected": "Tab показывает фокус основной кнопки в тёмной и светлой теме",
+      "ok": true,
+      "fact": "{\"focused\":true,\"visible\":true,\"outline\":\"3px\"}"
+    },
+    {
+      "id": "S36-dark",
+      "family": "button",
+      "variant": "secondary",
+      "state": "disabled",
+      "width": 320,
+      "theme": "dark",
+      "expected": "Нативная secondary disabled не реагирует на click, focus и hover",
+      "ok": false,
+      "fact": "locator.hover: Timeout 4000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#buttons .ui-button--secondary').first()\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"button\" class=\"ui-button ui-button--secondary\">Вторичное</button>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × wa"
     }
   ],
   "viewports": [
@@ -874,7 +918,7 @@
             "components"
           ],
           "line": 2,
-          "styleSheetId": "style-sheet-2600-13",
+          "styleSheetId": "style-sheet-3208-12",
           "declarations": [
             {
               "name": "border",
@@ -895,7 +939,7 @@
             "components"
           ],
           "line": 3,
-          "styleSheetId": "style-sheet-2600-13",
+          "styleSheetId": "style-sheet-3208-12",
           "declarations": [
             {
               "name": "padding-inline",
@@ -911,7 +955,7 @@
             "components"
           ],
           "line": 4,
-          "styleSheetId": "style-sheet-2600-13",
+          "styleSheetId": "style-sheet-3208-12",
           "declarations": [
             {
               "name": "background",
@@ -930,7 +974,7 @@
           "origin": "regular",
           "layers": [],
           "line": 3,
-          "styleSheetId": "style-sheet-2600-12",
+          "styleSheetId": "style-sheet-3208-10",
           "declarations": [
             {
               "name": "background",
@@ -976,7 +1020,7 @@
             "components"
           ],
           "line": 24,
-          "styleSheetId": "style-sheet-2600-13",
+          "styleSheetId": "style-sheet-3208-12",
           "declarations": [
             {
               "name": "padding-left",
@@ -992,7 +1036,7 @@
             "components"
           ],
           "line": 28,
-          "styleSheetId": "style-sheet-2600-13",
+          "styleSheetId": "style-sheet-3208-12",
           "declarations": [
             {
               "name": "background",
@@ -1023,7 +1067,7 @@
             "states"
           ],
           "line": 11,
-          "styleSheetId": "style-sheet-2600-10",
+          "styleSheetId": "style-sheet-3208-11",
           "declarations": [
             {
               "name": "background",
@@ -1054,7 +1098,7 @@
             "states"
           ],
           "line": 12,
-          "styleSheetId": "style-sheet-2600-10",
+          "styleSheetId": "style-sheet-3208-11",
           "declarations": [
             {
               "name": "padding-inline",
@@ -1068,7 +1112,7 @@
           "origin": "regular",
           "layers": [],
           "line": 5,
-          "styleSheetId": "style-sheet-2600-12",
+          "styleSheetId": "style-sheet-3208-10",
           "declarations": [
             {
               "name": "color",
@@ -1123,7 +1167,7 @@
             "components"
           ],
           "line": 12,
-          "styleSheetId": "style-sheet-2600-13",
+          "styleSheetId": "style-sheet-3208-12",
           "declarations": [
             {
               "name": "border",
@@ -1154,7 +1198,7 @@
             "states"
           ],
           "line": 9,
-          "styleSheetId": "style-sheet-2600-10",
+          "styleSheetId": "style-sheet-3208-11",
           "declarations": [
             {
               "name": "background",
@@ -1205,7 +1249,7 @@
             "components"
           ],
           "line": 2,
-          "styleSheetId": "style-sheet-2600-13",
+          "styleSheetId": "style-sheet-3208-12",
           "declarations": [
             {
               "name": "border",
@@ -1221,7 +1265,7 @@
             "components"
           ],
           "line": 3,
-          "styleSheetId": "style-sheet-2600-13",
+          "styleSheetId": "style-sheet-3208-12",
           "declarations": [
             {
               "name": "padding-inline",
@@ -1237,7 +1281,7 @@
             "components"
           ],
           "line": 7,
-          "styleSheetId": "style-sheet-2600-13",
+          "styleSheetId": "style-sheet-3208-12",
           "declarations": [
             {
               "name": "background",
@@ -1258,7 +1302,7 @@
             "states"
           ],
           "line": 11,
-          "styleSheetId": "style-sheet-2600-10",
+          "styleSheetId": "style-sheet-3208-11",
           "declarations": [
             {
               "name": "background",
@@ -1277,7 +1321,7 @@
           "origin": "regular",
           "layers": [],
           "line": 3,
-          "styleSheetId": "style-sheet-2600-12",
+          "styleSheetId": "style-sheet-3208-10",
           "declarations": [
             {
               "name": "background",
@@ -1296,7 +1340,7 @@
           "origin": "regular",
           "layers": [],
           "line": 4,
-          "styleSheetId": "style-sheet-2600-12",
+          "styleSheetId": "style-sheet-3208-10",
           "declarations": [
             {
               "name": "background",

@@ -54,3 +54,7 @@
 .ui-dialog > form > p { color: var(--color-muted); }
 .ui-dialog__actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: .5rem; margin-top: 1.6rem; }
 @media (max-width: 720px) { .card-grid, .form-grid { grid-template-columns: 1fr; } }
+
+/* Stress envelope A: shared semantics, independent family modifiers. */
+.ui-tag--paused { color: var(--color-paused); background: var(--color-paused-bg); }
+.ui-alert--paused { color: var(--color-paused); border-color: var(--color-paused); background: var(--color-paused-bg); }

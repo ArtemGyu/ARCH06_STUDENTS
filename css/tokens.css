@@ -1,5 +1,7 @@
 ﻿:root {
   color-scheme: light;
+  --color-paused: #69409b;
+  --color-paused-bg: #f2eaff;
   --color-danger-hover: #971d2a;
   --color-danger-ink: #ffffff;
   --color-disabled-bg: #e4e9f3;
@@ -35,6 +37,8 @@
 }
 :root[data-theme='dark'] {
   color-scheme: dark;
+  --color-paused: #dfc4ff;
+  --color-paused-bg: #3c2857;
   --color-danger-hover: #ffb8c2;
   --color-danger-ink: #32121b;
   --color-disabled-bg: #303e59;
@@ -60,4 +64,5 @@
   --color-info-bg: #193d5c;
   --shadow-card: 0 15px 45px rgba(0, 0, 0, .18);
 }
+
 

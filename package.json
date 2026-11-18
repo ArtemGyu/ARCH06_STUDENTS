@@ -3,19 +3,21 @@
   "private": true,
   "type": "module",
   "version": "0.6.0",
-  "description": "Advanced CSS architecture lab; intentionally broken baseline",
+  "description": "Repaired component CSS architecture with browser evidence and DOCX report",
   "scripts": {
     "dev": "node server.mjs",
     "test": "node --test tests/architecture.test.mjs",
     "test:e2e": "playwright test",
-    "test:all": "npm test && npm run test:e2e"
+    "test:all": "npm test && npm run test:e2e",
+    "evidence:before": "node tools/capture.mjs before",
+    "evidence:after": "node tools/capture.mjs after",
+    "report": "node tools/report.mjs"
   },
   "engines": {
     "node": ">=18"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.1",
-    "fflate": "^0.8.3",
-    "pdfjs-dist": "^6.5.438"
+    "fflate": "^0.8.3"
   }
 }

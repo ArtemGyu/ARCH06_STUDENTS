@@ -1,0 +1,2 @@
+﻿/* New contractor release: prefixed at the integration boundary. */
+.legacy-widget :where(.ui-button, .legacy-action) { border-radius: 0; }
